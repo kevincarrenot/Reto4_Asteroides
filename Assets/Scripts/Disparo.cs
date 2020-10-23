@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Disparo : MonoBehaviour
 {
+    public AudioSource aud;
     public Transform lanzadorIzq;
     public Transform lanzadorDer;
 
@@ -13,6 +14,7 @@ public class Disparo : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
+            aud.Play();
             Instantiate(DisparoPrefab, lanzadorIzq.position, DisparoPrefab.transform.rotation);
             Instantiate(DisparoPrefab, lanzadorDer.position, DisparoPrefab.transform.rotation);
 
